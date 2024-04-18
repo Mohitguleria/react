@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React CDN</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      //   const heading = document.createElement("h1");
+      //   heading.innerHTML = "Hello World!";
+      //   console.log(
+      //     "heading",
+      //     typeof heading,
+      //     typeof document.getElementById("root")
+      //   );
+      //   const root = document.getElementById("root");
+      //   root.appendChild(heading);
+    </script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script>
+      const content = React.createElement(
+        "div",
+        { className: "parent-class" },
+        [
+          React.createElement(
+            "div",
+            { className: "child-class-1" },
+            React.createElement(
+              "p",
+              { className: "p-child-1" },
+              "Paragraph of first child-class"
+            )
+          ),
+          React.createElement("div", { className: "child-class-2" }, [
+            React.createElement(
+              "p",
+              { className: "p1-child-2" },
+              "First paragraph of second child-class"
+            ),
+            React.createElement(
+              "p",
+              { className: "p2-child-2" },
+              "Second paragraph of second child-class"
+            ),
+          ]),
+        ]
+      );
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      console.log("content", content);
+      root.render(content);
+    </script>
+  </body>
+</html>
