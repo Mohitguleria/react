@@ -1,0 +1,41 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is a react learning repo",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Mohitguleria/react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Mohit Guleria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mohitguleria/react/issues"
+  },
+  "homepage": "https://github.com/Mohitguleria/react#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.1",
+    "formik": "^2.4.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.24.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

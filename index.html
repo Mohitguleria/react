@@ -3,60 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React CDN</title>
+    <title>React Zomato</title>
+    <link rel="stylesheet" href="./assets/styles/app.css" />
+    <link rel="icon" type="image/png"
+    href=https://b.zmtcdn.com/zomato_logo_2024c8b026427410312f6ad26acc66341fb91711469580.png
+    >
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <p>This website content is not rendered correctly.</p>
+      <noscript>
+        <p>Or</p>
+        <p>
+          This website requires JavaScript to function properly. Please enable
+          JavaScript in your browser settings.
+        </p>
+      </noscript>
+    </div>
     <script>
-      //   const heading = document.createElement("h1");
-      //   heading.innerHTML = "Hello World!";
-      //   console.log(
-      //     "heading",
-      //     typeof heading,
-      //     typeof document.getElementById("root")
-      //   );
-      //   const root = document.getElementById("root");
-      //   root.appendChild(heading);
+      // const heading = document.createElement("h1");
+      // heading.innerHTML = "Hello World!";
+      // console.log(
+      //   "heading",
+      //   typeof heading,
+      //   typeof document.getElementById("root")
+      // );
+      // const root = document.getElementById("root");
+      // root.appendChild(heading);
     </script>
-    <script
+    <!-- <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.production.min.js"
     ></script>
     <script
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
-    ></script>
-    <script>
-      const content = React.createElement(
-        "div",
-        { className: "parent-class" },
-        [
-          React.createElement(
-            "div",
-            { className: "child-class-1" },
-            React.createElement(
-              "p",
-              { className: "p-child-1" },
-              "Paragraph of first child-class"
-            )
-          ),
-          React.createElement("div", { className: "child-class-2" }, [
-            React.createElement(
-              "p",
-              { className: "p1-child-2" },
-              "First paragraph of second child-class"
-            ),
-            React.createElement(
-              "p",
-              { className: "p2-child-2" },
-              "Second paragraph of second child-class"
-            ),
-          ]),
-        ]
-      );
-      const root = ReactDOM.createRoot(document.getElementById("root"));
-      console.log("content", content);
-      root.render(content);
-    </script>
+    ></script> -->
+    <script type="module" src="./app.js"></script>
   </body>
 </html>
