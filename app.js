@@ -2,37 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Header from "./components/Header.js";
-import Body from "./components/Body.js";
-import AddRestaurant from "./components/AddRestaurant";
-import RestaurantMenu from "./components/RestaurantMenu";
-import Login from "./components/Login";
+// import Body from "./components/Body.js";
+// import AddRestaurant from "./components/AddRestaurant";
+// import RestaurantMenu from "./components/RestaurantMenu";
+// import Login from "./components/Login";
 import Footer from "./components/Footer.js";
 
-// import routeList from "./routeList.js";
+import routeList from "./routeList.js";
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
     defaultElement: <AppLayout />,
-    children: [
-      {
-        path: "/",
-        element: <Body />,
-      },
-      {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/add-restaurant",
-        element: <AddRestaurant />,
-      },
-      {
-        path: "/restaurants/:resId",
-        element: <RestaurantMenu />,
-      },
-    ],
+    children: [...routeList],
     errorElement: (
       <>
         <p>Oops! something went wrong!</p>

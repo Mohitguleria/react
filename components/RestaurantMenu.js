@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import useRestaurantDetails from "../utils/retaurants";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -15,36 +16,13 @@ const RestaurantMenu = () => {
       message: "",
     },
   });
-  useEffect(() => {
-    const fetchMenu = async () => {
-      const response = await fetch(
-        `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=31.00480&lng=75.94630&restaurantId=${resId}`
-      );
-      const { data } = await response.json();
-      const {
-        name,
-        costForTwoMessage,
-        avgRatingString,
-        totalRatingsString,
-        areaName,
-        cuisines,
-        sla,
-        feeDetails,
-      } = data?.cards[2]?.card?.card?.info;
 
-      setRestaurant({
-        name,
-        costForTwoMessage,
-        avgRatingString,
-        totalRatingsString,
-        areaName,
-        cuisines,
-        sla,
-        feeDetails,
-      });
-    };
-    fetchMenu();
-  }, []);
+  const responseData = useRestaurantDetails(resId);
+
+  useEffect(() => {
+    setRestaurant(responseData);
+  }, [responseData]);
+
   return (
     <>
       <h1>{restaurant.name}</h1>

@@ -1,10 +1,23 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import useOnlineStatus from "../utils/online.js";
 
 const Header = function () {
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const onlineStatus = useOnlineStatus();
+
+  useEffect(() => {
+    setIsOnline(onlineStatus);
+  }, [onlineStatus]);
+
   return (
     <div className="header-styles">
-      <h1 className="nav-link">
+      <h1
+        className={["nav-link", `${isOnline ? "green-logo" : "red-logo"}`].join(
+          " "
+        )}
+      >
         <Link to="/">Zomato</Link>
       </h1>
       <nav>

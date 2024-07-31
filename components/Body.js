@@ -84,7 +84,7 @@ const Body = function () {
           <p>Discover the best food & drinks in Chandigarh</p>
           <input
             className="search-input"
-            type="text"
+            type="search"
             value={searchText}
             onChange={searchRestaurant}
             placeholder="Search for restaurant, cuisine or a dish"
