@@ -76,41 +76,49 @@ const Body = function () {
 
   return (
     <>
-      <div className="main-content-styles">
-        <div className="centered">
-          <h3>
+      <div
+        className="mt-8"
+        style={{ fontFamily: '"Okra (woff2)", Helvetica, sans-serif' }}
+      >
+        <div className="absolute min-w-[350px] text-center text-[azure] -translate-x-2/4 -translate-y-2/4 left-2/4 top-[30%]">
+          <h3 className="text-[90px] font-black mb-0">
             <i>zomato</i>
           </h3>
-          <p>Discover the best food & drinks in Chandigarh</p>
+          <p className="text-[2rem]">
+            Discover the best food & drinks in Chandigarh
+          </p>
           <input
-            className="search-input"
+            className="min-w-[310px] h-[30px] rounded mb-20 text-black focus:outline-none p-3"
             type="search"
             value={searchText}
             onChange={searchRestaurant}
             placeholder="Search for restaurant, cuisine or a dish"
           />
-          <button className="search-button" onClick={filterSearchRestaurant}>
+          <button
+            className="cursor-pointer h-[34px] bg-white border-opacity-100 text-black rounded-2xl px-2 py-1 hover:bg-yellow-200 active:bg-yellow-200 focus:bg-yellow-400"
+            onClick={filterSearchRestaurant}
+          >
             Search
           </button>
         </div>
       </div>
       <div>
-        {/* className="main-content-styles" <div className="centered">
-        <h3>
-          <i>zomato</i>
-        </h3>
-        <p>Discover the best food & drinks in Chandigarh</p>
-        <input placeholder="Search for restaurant, cuisine or a dish" />
-      </div> */}
-        <div className="restaurant-container">
-          <button onClick={filterRestaurant} style={{ cursor: "pointer" }}>
+        <div className="flex flex-wrap justify-center mx-[90px] my-0">
+          <button
+            className="cursor-pointer rounded hover:rounded-lg border border-black bg-gray-500 px-2 py-1 mr-1"
+            onClick={filterRestaurant}
+          >
             4+ rated Restaurants
           </button>
-          <button onClick={filterReset} style={{ cursor: "pointer" }}>
+          <button
+            className="cursor-pointer rounded hover:rounded-lg border border-black bg-gray-500 px-2 py-1"
+            onClick={filterReset}
+            style={{ cursor: "pointer" }}
+          >
             Reset
           </button>
         </div>
-        <div className="restaurant-container">
+        <div className="flex flex-wrap justify-center mx-[90px] my-0">
           <>
             {!filteredList?.length &&
               shimmerCardList.map((card) => {

@@ -2,11 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Header from "./components/Header.js";
-// import Body from "./components/Body.js";
-// import AddRestaurant from "./components/AddRestaurant";
-// import RestaurantMenu from "./components/RestaurantMenu";
-// import Login from "./components/Login";
-import Footer from "./components/Footer.js";
+import "./main.css";
 
 import routeList from "./routeList.js";
 
@@ -68,11 +64,10 @@ library.add(fas);
 function AppLayout() {
   return (
     <div className="app">
-      <div className="top-common-bg">
+      <div className=" top-common-bg">
         <Header />
       </div>
       <Outlet />
-      <Footer />
     </div>
   );
 }

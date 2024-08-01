@@ -2,13 +2,21 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 const Login = () => {
+  // console.log("Render 1");
   const [selectedOption, setSelectedOption] = React.useState("");
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value + " rockstar");
   };
   React.useEffect(() => {
     console.log(selectedOption);
+    return () => {
+      // setTimeout(() => {
+      //   console.log("Render 2");
+      // }, 5000);
+      // console.log("callback to ensure the completely pdated state")
+    };
   }, [selectedOption]);
+  // console.log("Render 3");
   return (
     <div>
       <h1>Any place in your app!</h1>

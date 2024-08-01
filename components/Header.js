@@ -12,25 +12,62 @@ const Header = function () {
   }, [onlineStatus]);
 
   return (
-    <div className="header-styles">
+    <div className="flex text-[white] justify-between mx-2 my-0 pt-4">
       <h1
-        className={["nav-link", `${isOnline ? "green-logo" : "red-logo"}`].join(
-          " "
-        )}
+        className={[
+          "text-4xl",
+          "cursor-pointer mx-[1.2rem] my-0 px-[0.2rem] py-0",
+          "mt-[0.1rem]",
+          "border-[3px]",
+          "border-solid",
+          `${isOnline ? "border-[green]" : "border-[red]"}`,
+        ].join(" ")}
+        style={{
+          fontFamily: "'Okra', Helvetica, sans-serif",
+        }}
       >
         <Link to="/">Zomato</Link>
       </h1>
       <nav>
-        <ul>
-          <li className="nav-link">Investor Relations</li>
-          <li className="nav-link">
+        <ul className="flex list-none justify-between">
+          <li
+            className="cursor-pointer mx-[1.2rem] my-0 px-[0.2rem] py-0"
+            style={{
+              fontFamily: "'Okra', Helvetica, sans-serif",
+            }}
+          >
+            Investor Relations
+          </li>
+          <li
+            className="cursor-pointer mx-[1.2rem] my-0 px-[0.2rem] py-0"
+            style={{
+              fontFamily: "'Okra', Helvetica, sans-serif",
+            }}
+          >
             <Link to="/add-restaurant">Add Restaurant</Link>
           </li>
-          <li className="nav-link">
+          <li
+            className="cursor-pointer mx-[1.2rem] my-0 px-[0.2rem] py-0"
+            style={{
+              fontFamily: "'Okra', Helvetica, sans-serif",
+            }}
+          >
             <Link to="/login">Login</Link>
           </li>
-          <li className="nav-link">Signup</li>
-          <li className="nav-link">
+          <li
+            className="cursor-pointer mx-[1.2rem] my-0 px-[0.2rem] py-0"
+            style={{
+              fontFamily: "'Okra', Helvetica, sans-serif",
+            }}
+          >
+            Signup
+          </li>
+          <li
+            className="cursor-pointer mx-[1.2rem] my-0 px-[0.2rem] py-0"
+            style={{
+              fontFamily: "'Okra', Helvetica, sans-serif",
+            }}
+          >
             <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
           </li>
         </ul>
